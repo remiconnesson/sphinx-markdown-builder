@@ -353,6 +353,7 @@ class PushContext(Generic[_ContextT]):  # pylint: disable=too-few-public-methods
 
 ItalicContext = PushContext(WrappedContext, "*")  # _ is more restrictive
 StrongContext = PushContext(WrappedContext, "**")  # _ is more restrictive
+StrongLiteralContext = PushContext(WrappedContext, "**`", "`**")
 SubscriptContext = PushContext(WrappedContext, "<sub>", "</sub>")
 DocInfoContext = PushContext(
     MetaContext,

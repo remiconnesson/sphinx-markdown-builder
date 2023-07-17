@@ -40,6 +40,7 @@ from sphinx_markdown_builder.contexts import (
     MetaContext,
     PushContext,
     StrongContext,
+    StrongLiteralContext,
     SubContext,
     SubContextParams,
     SubscriptContext,
@@ -65,7 +66,7 @@ PREDEFINED_ELEMENTS: Dict[str, Union[PushContext, SKIP, None]] = dict(  # pylint
     subscript=SubscriptContext,
     superscript=SubscriptContext,
     desc_annotation=ItalicContext,
-    literal_strong=StrongContext,
+    literal_strong=StrongLiteralContext,
     literal_emphasis=ItalicContext,
     field_name=StrongContext,  # e.g 'returns', 'parameters'
     # Doc info elements
